@@ -3,21 +3,20 @@ package problem3;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Solution4 implements ISolution {
+public class Solution8 implements ISolution {
 
 	@Override
 	public int lengthOfLongestSubstring(String s) {
 		Set<Character> set = new HashSet<Character>();
-		char[] charArray = s.toCharArray();
 		int maxLen = 0;
-		for (int i = 0, j = 0; i < charArray.length; i++) {
-			if (!set.contains(charArray[i])) {
-				set.add(charArray[i]);
+		for (int i = 0, j = 0; i < s.length(); i++) {
+			if (!set.contains(s.charAt(i))) {
+				set.add(s.charAt(i));
 			} else {
 				if (maxLen < set.size())
 					maxLen = set.size();
-				while (set.contains(charArray[i])) {
-					set.remove(charArray[j++]);
+				while (set.contains(s.charAt(i))) {
+					set.remove(s.charAt(j++));
 				}
 			}
 		}
