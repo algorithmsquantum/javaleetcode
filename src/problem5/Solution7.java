@@ -2,34 +2,16 @@ package problem5;
 
 import java.util.HashMap;
 
-import sun.tools.jar.resources.jar;
-
-//Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
-//
-//Example:
-//
-//Input: "babad"
-//
-//Output: "bab"
-//
-//Note: "aba" is also a valid answer.
-//
-//Example:
-//
-//Input: "cbbd"
-//
-//Output: "bb"
-
-public class Solution6 {
+public class Solution7 {
 	public static void main(String[] args) {
-		String longestPalindrome = longestPalindrome("bbbbb");
+		String longestPalindrome = longestPalindrome("abcba");
 		System.out.println(longestPalindrome); //=======================================================================
 	}
 
 	public static String longestPalindrome(String s) {
 		HashMap<Character, Integer> cMap = new HashMap<>();
 		int maxLen = 0;
-		String maxString = "", curString = "";
+		String maxString = "", curString = "",palindromeString="";
 		for (int i = 0, j = 0; i < s.length(); i++) {
 			if (cMap.keySet().contains(s.charAt(i))) {
 				if (s.charAt(i) == s.charAt(i - 1)) {
