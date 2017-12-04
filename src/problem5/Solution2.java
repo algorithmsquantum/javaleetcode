@@ -1,12 +1,11 @@
-package problem1;
+package problem5;
 
-public class Test1 {
-
-	public static void main(String[] args) {
-		System.out.println("abcdefg".substring(1,2));
+public class Solution2 {
+	public String longestPalindrome(String s) {
+		
+		return "";
 	}
 }
-
 
 /*************************************************************
  *

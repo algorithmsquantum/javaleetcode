@@ -1,10 +1,17 @@
-package problem1;
+package problem5;
 
-public class Test1 {
+import org.junit.jupiter.api.Test;
 
-	public static void main(String[] args) {
-		System.out.println("abcdefg".substring(1,2));
+class TestAll {
+
+	String str="babad";
+	
+	@Test
+	void test() throws Exception{
+		int longestPalindrome = new Solution1().longestPalindrome("fqfefa");
+		System.out.println(longestPalindrome);
 	}
+	
 }
 
 

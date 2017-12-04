@@ -2,7 +2,6 @@ package problem5;
 
 import java.util.HashMap;
 
-import sun.tools.jar.resources.jar;
 
 //Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
 //
