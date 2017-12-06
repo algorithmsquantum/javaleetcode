@@ -2,8 +2,8 @@ package problem5;
 
 public class Solution12 {
 	public static void main(String[] args) {
-				String string = "dddddd";
-//		String string = "anana";
+		String string = "dddddd";
+		//		String string = "anana";
 
 		String longestPalindrome = longestPalindrome(string);
 		System.out.println(longestPalindrome);
@@ -40,7 +40,7 @@ public class Solution12 {
 
 		//		aabaa
 		int length = s.length();
-		int n = length, m = n + 1;
+		int n = length / 2, m = n + 1;
 		while (n > 0) {
 			int x = n - 1, y = n + 1;
 			while (x >= 0 && y < s.length()) {
