@@ -1,13 +1,13 @@
 package problem5;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-class TestAll {
+public class TestAll {
 
 	String str="babad";
 	
 	@Test
-	void test() throws Exception{
+	public void test() throws Exception{
 		int longestPalindrome = new Solution1().longestPalindrome("fqfefa");
 		System.out.println(longestPalindrome);
 	}
