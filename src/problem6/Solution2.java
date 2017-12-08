@@ -8,13 +8,13 @@ import java.util.Arrays;
 public class Solution2 {
 	public static void main(String[] args) {
 		String str = "ABCDEFGHIJKLMN";
-		System.out.println(convert(str, 7));
+		System.out.println(convert(str, 4));
 	}
 
 	public static String convert(String s, int numRows) {
 		if (numRows == 1)
 			return s;
-		Character[][] arrs = new Character[(s.length() + 2*numRows-3) / (2 * numRows - 2) * 2][numRows];
+		Character[][] arrs = new Character[(2*(s.length() + numRows)-3) / (2 * (numRows - 1))][numRows];
 		for (int i = 0, j = 0, k = 0; i < s.length(); i++) {
 			if (k++ == numRows) {
 				j++;
@@ -29,6 +29,7 @@ public class Solution2 {
 			}
 			arrs[j][k - 1] = s.charAt(i);
 		}
+		
 		System.out.println(Arrays.deepToString(arrs));
 
 		StringBuilder stringBuilder = new StringBuilder();
