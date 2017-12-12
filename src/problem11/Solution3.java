@@ -15,13 +15,14 @@ public class Solution3 {
 
 	public static int maxArea(int[] height) {
 		int max = 0, maxHeight = 0;
+		int j = height.length - 1;
 		for (int i = 0; i < height.length - 1; i++) {
 			if (height[i] > maxHeight) {
 				maxHeight = height[i];
 			} else {
 				continue;
 			}
-			for (int j = height.length - 1; j > i; j--) {
+			for (; j > i; j--) {
 				int cWidth = j - i;
 				int cHeight = height[j] > height[i] ? height[i] : height[j];
 				if (cWidth * cHeight > max) {
